@@ -8,7 +8,7 @@ export const DEFAULTS = {
   wipes: 180,
   duration: 50, // minutes of games
   round: 1, // minutes per round
-  success: 50, // % chance a senior succeeds on an attempt
+  success: 33, // % chance a senior succeeds on an attempt
   reserve: 10, // % of each prize kept back as a safety buffer
 };
 
