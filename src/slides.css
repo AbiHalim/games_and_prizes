@@ -1,0 +1,476 @@
+/* Intro slides (/slides). Builds on the tokens in styles.css; the page is always light. */
+
+.slides-body {
+  height: 100vh;
+  overflow: hidden;
+  background: #1f1b2e;
+  user-select: none;
+}
+
+.deck {
+  position: fixed;
+  inset: 0;
+}
+
+.stage {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 1600px;
+  height: 900px;
+  transform-origin: center;
+  background: var(--bg);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+  padding: 80px 110px 110px;
+  text-align: center;
+}
+
+.slide.is-entering {
+  animation: slide-in 0.4s ease-out;
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+}
+
+.slide h1 {
+  font-size: 128px;
+  font-weight: 900;
+  line-height: 1.05;
+}
+
+.slide h2 {
+  font-size: 72px;
+  font-weight: 900;
+  line-height: 1.15;
+}
+
+.kicker {
+  margin: 0;
+  font-size: 40px;
+  font-weight: 900;
+  color: var(--accent);
+}
+
+/* ---------- Title & closing ---------- */
+.slide-hero {
+  background: linear-gradient(135deg, #7048e8 0%, #c2255c 55%, #f76707 100%);
+  color: #fff;
+  gap: 20px;
+}
+
+.hero-emoji {
+  font-size: 170px;
+  line-height: 1;
+  animation: bob 2.4s ease-in-out infinite;
+}
+
+@keyframes bob {
+  50% {
+    transform: translateY(-14px) rotate(-6deg);
+  }
+}
+
+.hero-sub {
+  margin: 0;
+  font-size: 56px;
+  font-weight: 800;
+  opacity: 0.95;
+}
+
+.hero-welcome {
+  margin: 28px 0 0;
+  font-size: 48px;
+  font-weight: 800;
+  background: rgba(255, 255, 255, 0.18);
+  padding: 14px 44px;
+  border-radius: 999px;
+}
+
+.have-fun {
+  font-size: 170px !important;
+}
+
+/* ---------- Two activities ---------- */
+.activity-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 600px);
+  gap: 64px;
+}
+
+.activity-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 56px 32px 44px;
+  border-radius: 40px;
+  color: #fff;
+  box-shadow: 0 16px 40px rgba(120, 72, 0, 0.18);
+}
+
+.activity-num {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--text);
+  font-size: 38px;
+  font-weight: 900;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.activity-icon {
+  font-size: 130px;
+  line-height: 1.1;
+}
+
+.activity-title {
+  font-size: 64px;
+  font-weight: 900;
+}
+
+.activity-desc {
+  font-size: 38px;
+  font-weight: 700;
+}
+
+.activity-time {
+  margin-top: 8px;
+  font-size: 32px;
+  font-weight: 800;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 6px 24px;
+  border-radius: 999px;
+}
+
+/* ---------- Sample trivia question ---------- */
+.sample-q {
+  max-width: 1300px;
+  text-wrap: balance;
+}
+
+.sample-options {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 620px);
+  gap: 28px;
+}
+
+.sample-options li {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background: var(--surface);
+  border: 4px solid var(--border);
+  border-radius: 28px;
+  padding: 22px 30px;
+  font-size: 48px;
+  font-weight: 800;
+  text-align: left;
+  transition:
+    opacity 0.3s,
+    background 0.3s;
+}
+
+.sample-options .letter {
+  font-size: 40px;
+}
+
+.sample-options.is-revealed li:not(.correct) {
+  opacity: 0.4;
+}
+
+.sample-options li.correct {
+  background: var(--correct-bg);
+  border-color: var(--correct);
+  animation: pop 0.45s ease-out;
+}
+
+.sample-options li.correct .letter {
+  background: var(--correct);
+}
+
+.rule {
+  margin: 0;
+  font-size: 46px;
+  font-weight: 900;
+  color: var(--primary);
+  transition: opacity 0.3s;
+}
+
+.rule.is-hidden {
+  opacity: 0;
+}
+
+/* ---------- Roll the bottle ---------- */
+.bottle-layout {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+}
+
+.bottle-diagram {
+  width: 820px;
+  height: auto;
+  flex: none;
+}
+
+.dg-label {
+  font-family: var(--font);
+  font-size: 36px;
+  font-weight: 900;
+  fill: var(--text);
+}
+
+.dg-table {
+  fill: #6b4219;
+  font-size: 30px;
+}
+
+.dg-bottle {
+  animation: roll 3.6s cubic-bezier(0.25, 0.8, 0.35, 1) infinite;
+}
+
+@keyframes roll {
+  0%,
+  12% {
+    transform: translateX(0);
+  }
+  70%,
+  100% {
+    transform: translateX(522px);
+  }
+}
+
+.steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  text-align: left;
+  width: 520px;
+}
+
+.steps li {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.step-num {
+  flex: none;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #fff;
+  font-size: 38px;
+  font-weight: 900;
+  display: grid;
+  place-items: center;
+}
+
+.steps li:last-child .step-num {
+  background: var(--accent);
+}
+
+/* ---------- Prize wheel ---------- */
+.wheel-slide {
+  display: flex;
+  align-items: center;
+  gap: 90px;
+  text-align: left;
+}
+
+.mini-wheel {
+  --wheel-size: 600px;
+  position: relative;
+  width: var(--wheel-size);
+  height: var(--wheel-size);
+  flex: none;
+}
+
+.mini-wheel canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  filter: drop-shadow(0 12px 20px rgba(60, 30, 0, 0.25));
+  animation: spin-slow 24s linear infinite;
+}
+
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.mini-wheel .wheel-pointer {
+  top: -10px;
+  margin-left: -32px;
+  border-left-width: 32px;
+  border-right-width: 32px;
+  border-top-width: 64px;
+}
+
+.mini-wheel .wheel-hub {
+  display: grid;
+  place-items: center;
+  cursor: inherit;
+  font-size: 34px;
+}
+
+.wheel-copy {
+  width: 640px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.wheel-copy h2 {
+  font-size: 60px;
+}
+
+.could-win {
+  margin: 12px 0 0;
+  font-size: 38px;
+  font-weight: 800;
+  color: var(--muted);
+}
+
+.prize-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.prize-list li {
+  font-size: 46px;
+  font-weight: 900;
+  padding: 12px 34px;
+  border-radius: 999px;
+  color: #fff;
+  align-self: flex-start;
+}
+
+.prize-list .prize-nothing {
+  background: #ffd43b;
+  color: #3b2a00;
+}
+
+/* ---------- Controls ---------- */
+.deck-nav {
+  position: fixed;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  background: rgba(31, 27, 46, 0.82);
+  border-radius: 999px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.4s;
+  z-index: 10;
+  max-width: calc(100vw - 32px);
+}
+
+body.is-idle .deck-nav {
+  opacity: 0;
+}
+
+body.is-idle {
+  cursor: none;
+}
+
+.nav-btn {
+  font: inherit;
+  font-size: 1.2rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+  cursor: pointer;
+  flex: none;
+}
+
+.nav-btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.nav-btn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.26);
+}
+
+.nav-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.nav-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.35);
+  cursor: pointer;
+}
+
+.nav-dot[aria-current='true'] {
+  background: #fff;
+  transform: scale(1.3);
+}
+
+.deck-nav .lang-switch {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: transparent;
+}
+
+.deck-nav .lang-switch button {
+  color: #fff;
+  min-height: 34px;
+  padding: 4px 12px;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 560px) {
+  .nav-dots {
+    display: none;
+  }
+}

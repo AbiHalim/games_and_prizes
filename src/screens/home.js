@@ -32,6 +32,9 @@ export function render(root, { settings, source, odds }) {
         <div class="odds-source">${sourceText}</div>
       </div>
 
-      <a class="setup-link" href="#/setup">⚙️ ${t('organiserSetup')}</a>
+      <div class="home-links">
+        <a class="setup-link" href="/slides">🖼️ ${t('introSlides')}</a>
+        <a class="setup-link" href="#/setup">⚙️ ${t('organiserSetup')}</a>
+      </div>
     </section>`;
 }

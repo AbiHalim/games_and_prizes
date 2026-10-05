@@ -51,7 +51,7 @@ export function buildSegments(odds) {
   return prizes.flatMap((p) => [p, 'nothing']);
 }
 
-function drawWheel(canvas, segments) {
+export function drawWheel(canvas, segments) {
   const ctx = canvas.getContext('2d');
   const c = SIZE / 2;
   const seg = (Math.PI * 2) / segments.length;

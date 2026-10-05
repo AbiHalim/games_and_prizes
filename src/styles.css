@@ -376,6 +376,13 @@ body.is-spinning .lang-switch {
   font-weight: 700;
 }
 
+.home-links {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .setup-link {
   color: var(--muted);
   font-weight: 700;

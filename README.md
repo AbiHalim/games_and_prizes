@@ -37,6 +37,17 @@ Each laptop keeps a small count of the spins and prizes given out on it, shown u
 - Trivia: **←/→** previous/next question, **Space/Enter** reveal the answer, **S** open the wheel (after revealing)
 - Wheel: **Space/Enter** spin, **Esc** close the wheel pop-up
 
+## Intro slides
+
+Six slides to open the activity are at **`/slides`** (for example `https://<your-site>.vercel.app/slides`). Send that link to the centre and open it on the projector.
+
+- **Next slide:** → / Space / Page Down. A presentation clicker works too, and so does clicking the slide.
+- **Previous slide:** ← / Page Up
+- **Full screen:** **F**, or the ⛶ button
+- **Language:** EN / 中文 / BM in the bottom bar. The controls fade out when the mouse is still.
+- **Sample question:** the trivia slide shows its answer on the first "next" press.
+- **Link to a slide:** add `#3` and so on to the address.
+
 ## Run locally
 
 There is no build step. Serve the folder with any static server:
@@ -59,3 +70,4 @@ Either run `vercel` in this folder, or push it to GitHub and import the repo in 
 - `src/i18n.js`: interface text in the three languages
 - `src/wheel.js`: the prize wheel
 - `src/screens/`: the home, trivia, wheel and setup screens
+- `slides/index.html`, `src/slides.js`, `src/slides.css`: the intro slides at `/slides`

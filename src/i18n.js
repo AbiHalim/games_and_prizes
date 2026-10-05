@@ -85,6 +85,43 @@ const STRINGS = {
   organiserSetup: { en: 'Organiser setup', zh: '主办方设置', ms: 'Tetapan penganjur' },
   soundOn: { en: 'Sound on', zh: '声音开', ms: 'Bunyi hidup' },
   soundOff: { en: 'Sound off', zh: '声音关', ms: 'Bunyi mati' },
+  introSlides: { en: 'Intro slides', zh: '介绍幻灯片', ms: 'Slaid pengenalan' },
+
+  // Intro slides (/slides)
+  welcome: { en: 'Welcome, everyone!', zh: '欢迎大家！', ms: 'Selamat datang semua!' },
+  todaysGames: { en: "Today's games", zh: '今天的游戏', ms: 'Permainan hari ini' },
+  triviaIntro: { en: 'Answer fun questions', zh: '回答有趣的问题', ms: 'Jawab soalan yang menarik' },
+  bottleIntro: { en: 'Roll a bottle onto the target', zh: '把瓶子滚到目标上', ms: 'Gulingkan botol ke atas sasaran' },
+  about25: { en: 'About 25 minutes', zh: '大约25分钟', ms: 'Kira-kira 25 minit' },
+  sampleQuestion: { en: 'Sample question', zh: '例题', ms: 'Contoh soalan' },
+  triviaRule: {
+    en: 'Got it right? Spin the prize wheel!',
+    zh: '答对了？就可以转奖品轮盘！',
+    ms: 'Jawapan betul? Pusing roda hadiah!',
+  },
+  bottleStep1: {
+    en: 'Take turns to roll the bottle along the table',
+    zh: '大家轮流把瓶子在桌上滚出去',
+    ms: 'Bergilir-gilir menggulingkan botol di atas meja',
+  },
+  bottleStep2: { en: 'Try to make it stop on the target', zh: '尽量让瓶子停在目标上', ms: 'Cuba pastikan ia berhenti di atas sasaran' },
+  bottleStep3: {
+    en: 'Stopped on the target? Spin the prize wheel!',
+    zh: '停在目标上了？就可以转奖品轮盘！',
+    ms: 'Berhenti di atas sasaran? Pusing roda hadiah!',
+  },
+  labelBottle: { en: 'Bottle', zh: '瓶子', ms: 'Botol' },
+  labelTarget: { en: 'Target', zh: '目标', ms: 'Sasaran' },
+  labelTable: { en: 'Table', zh: '桌子', ms: 'Meja' },
+  wheelExplain: {
+    en: 'Every time you win a game, you get to spin the wheel!',
+    zh: '每次游戏成功，就可以转一次轮盘！',
+    ms: 'Setiap kali anda berjaya, anda boleh memusing roda!',
+  },
+  youCouldWin: { en: 'You could win:', zh: '你可能会得到：', ms: 'Anda mungkin mendapat:' },
+  haveFun: { en: 'Have fun!', zh: '玩得开心！', ms: 'Selamat bergembira!' },
+  goodLuck: { en: 'Good luck, everyone!', zh: '祝大家好运！', ms: 'Semoga berjaya, semua!' },
+  fullscreen: { en: 'Full screen', zh: '全屏', ms: 'Skrin penuh' },
 };
 
 const LANG_KEY = 'stw.lang';
