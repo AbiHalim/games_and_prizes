@@ -12,10 +12,10 @@ The wheel gives **Tissues**, **Wet Wipes** or **Try Again**. The odds are set fr
 ```
 rounds         = game time ÷ minutes per round          (50 ÷ 1 = 50)
 expected spins = seniors × rounds × success chance      (50 × 50 × 33% = 825)
-usable prizes  = stock × (1 − reserve %)                (180 × 90% = 162 tissues, 180 × 90% = 162 wipes)
+usable prizes  = stock × (1 − reserve %)                (180 × 90% = 162 tissues, 160 × 90% = 144 wipes)
 P(tissues)     = usable tissues ÷ expected spins        (19.64%)
-P(wet wipes)   = usable wipes ÷ expected spins          (19.64%)
-P(try again)   = the rest                               (60.73%)
+P(wet wipes)   = usable wipes ÷ expected spins          (17.45%)
+P(try again)   = the rest                               (62.91%)
 ```
 
 If there are more prizes than expected spins, every spin wins, and the prize type is split in proportion to stock.

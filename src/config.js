@@ -5,7 +5,7 @@ const STORAGE_KEY = 'stw.settings.v1';
 export const DEFAULTS = {
   seniors: 50,
   tissues: 180,
-  wipes: 180,
+  wipes: 160,
   duration: 50, // minutes of games
   round: 1, // minutes per round
   success: 33, // % chance a senior succeeds on an attempt
